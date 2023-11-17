@@ -176,7 +176,7 @@ class Zombie:
 
         #SEL_chase_or_wander = Selector('추적 또는 배회',SEQ_chase_boy,SEQ_wander)
         #root =  SEL_chase_or_flee_or_wander = Selector('추적 또는 도망 또는 배회',SEQ_chase_boy,SEQ_run_away,SEQ_wander)
-        root = SEL_chase_or_flee_or_wander = Selector('추적 또는 도망 또는 배회',  SEQ_chase_boy_or_run,SEQ_wander)
+        root = SEL_chase_or_flee_or_wander = Selector('추적하거나도망 또는 배회',  SEQ_chase_boy_or_run,SEQ_wander)
         #a5 = Action('순찰 위치 가져오기',self.get_patrol_location)
         #root =  SEQ_patrol = Sequence('순찰',a5,a2)
 
