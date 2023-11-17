@@ -166,7 +166,7 @@ class Zombie:
         c2 = Condition('좀비가 공이 더 많은가?',self.compare_ball)
         a4 = Action('소년으로 이동',self.move_to_boy)
 
-        SEQ_chase_boy = Sequence('소년을 추적',c1,a4)
+        SEQ_chase_boy_or_run = Sequence('추적하거나 도망간다',c1,a4)
 
         c3 = Condition('거리가 7미터 이상 벌어졌는가?',self.is_boy_far,7)
         a6 = Action('도망', self.run_away,7)
@@ -176,7 +176,7 @@ class Zombie:
 
         #SEL_chase_or_wander = Selector('추적 또는 배회',SEQ_chase_boy,SEQ_wander)
         #root =  SEL_chase_or_flee_or_wander = Selector('추적 또는 도망 또는 배회',SEQ_chase_boy,SEQ_run_away,SEQ_wander)
-        root = SEL_chase_or_flee_or_wander = Selector('추적 또는 도망 또는 배회',  SEQ_chase_boy,SEQ_wander)
+        root = SEL_chase_or_flee_or_wander = Selector('추적 또는 도망 또는 배회',  SEQ_chase_boy_or_run,SEQ_wander)
         #a5 = Action('순찰 위치 가져오기',self.get_patrol_location)
         #root =  SEQ_patrol = Sequence('순찰',a5,a2)
 
